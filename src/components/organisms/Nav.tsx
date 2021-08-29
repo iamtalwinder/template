@@ -15,6 +15,11 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  buttonGroup: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
   title: {
     flexGrow: 1,
   },
@@ -38,11 +43,13 @@ export function Nav() {
             <Typography variant="h6" className={classes.title}>
               Logo
             </Typography>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Documentation</Button>
-            <Button color="inherit" variant="contained">
-              Purchase now
-            </Button>
+            <div className={classes.buttonGroup}>
+              <Button color="inherit">Home</Button>
+              <Button color="inherit">Documentation</Button>
+              <Button color="inherit" variant="contained">
+                Purchase now
+              </Button>
+            </div>
           </Toolbar>
         </Container>
       </AppBar>
