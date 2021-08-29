@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function Nav() {
+export default function Nav() {
   const classes = useStyles();
 
   return (
